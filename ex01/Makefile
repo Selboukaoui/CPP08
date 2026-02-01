@@ -1,8 +1,8 @@
-NAME=easyfind
+NAME=span
 CPP	=c++
 CPPFLAGS=	-Wall -Wextra -Werror -std=c++98
 
-SRCS=main.cpp
+SRCS=main.cpp Span.cpp
 
 OBJS=$(SRCS:.cpp=.o)
 
@@ -11,7 +11,7 @@ all:$(NAME)
 $(NAME): $(OBJS)
 		$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
-%.o:%.cpp easyfind.hpp
+%.o:%.cpp Span.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
