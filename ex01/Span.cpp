@@ -53,8 +53,8 @@ int Span::longestSpan()
     if (data.size() <= 1)
         throw std::runtime_error("Not enough data");
 
+    int min = *std::min_element(data.begin(), data.end());
+    int max = *std::max_element(data.begin(), data.end());
 
-    std::pair<std::vector<int>::iterator, std::vector<int>::iterator> it  = std::minmax_element(data.begin(), data.end());
-
-    return *it.second - *it.first;
+    return max - min;
 }
