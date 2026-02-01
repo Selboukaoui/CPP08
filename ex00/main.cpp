@@ -19,6 +19,7 @@ int main()
         std::cout << "List: index = " << easyfind(l, 42) << std::endl;
         std::cout << "Deque: index = " << easyfind(d, 42) << std::endl;
         std::cout << "Set: index = " << easyfind(s, 42) << std::endl;
+        
         //not found case:
         std::cout << "Vector: index = " << easyfind(v, 677202002) << std::endl;
     }

@@ -1,0 +1,75 @@
+📦 std::vector
+✅ Definition
+
+A dynamic array that stores elements in contiguous memory and allows fast access by index.
+
+🧠 Memory Structure
+[ 1 | 2 | 3 | 4 | 5 ]
+
+Single continuous block.
+When full → new larger block → copy/move elements.
+
+➕ Positive Points
+
+✔ Fastest iteration (cache-friendly)
+✔ Random access O(1)
+✔ Low memory overhead
+✔ Fast push_back()
+✔ Best general-purpose container
+
+📦 std::deque
+✅ Definition
+
+A sequence container allowing fast insertion/removal at both front and back.
+
+🧠 Memory Structure
+block + block + block + block
+
+Multiple fixed-size blocks, not contiguous.
+
+➕ Positive Points
+
+✔ Fast push_front() and push_back()
+✔ No big reallocation
+✔ Random access O(1)
+✔ References more stable than vector
+
+📦 std::list (Doubly Linked List)
+✅ Definition
+
+A container where each element is stored in a node connected with pointers.
+
+🧠 Memory Structure
+[prev|data|next] <-> [prev|data|next] <-> [prev|data|next]
+
+Each element is separate in memory.
+
+➕ Positive Points
+
+✔ Fast insertion anywhere (if iterator known)
+✔ Fast deletion anywhere
+✔ No reallocation ever
+✔ Iterators remain valid after insertions
+
+📦 std::set
+✅ Definition
+
+An ordered associative container that stores unique elements in sorted order.
+
+🧠 Memory Structure
+
+Balanced binary tree (usually Red-Black Tree):
+
+        8
+      /   \
+     3     12
+    / \      \
+   1   6      15
+➕ Positive Points
+
+✔ Elements always sorted
+✔ No duplicates
+✔ Fast search O(log n)
+✔ Fast insert/delete O(log n)
+✔ Useful for membership tests
+
